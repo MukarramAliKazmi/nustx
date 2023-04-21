@@ -1,4 +1,4 @@
 // styles
-import '@/styles.css'
+import '@/styles/styles.css'
 
 // components
