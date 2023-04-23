@@ -41,6 +41,8 @@ module.exports = {
 
     'prettier/prettier': ['error'],
 
+    "import/no-extraneous-dependencies": 'off',
+
     'no-restricted-imports': [
       'error',
       {
