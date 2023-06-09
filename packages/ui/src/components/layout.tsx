@@ -5,9 +5,10 @@ import { Topbar } from '@/components/topbar'
 
 export interface LayoutProps {
   children: React.ReactNode
+  sidebarItems: Array<{ title: string; route: string }>
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({ children, sidebarItems }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
@@ -24,6 +25,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           handleIsSidebarOpen={() =>
             isSidebarOpen ? setIsSidebarOpen(false) : setIsSidebarOpen(true)
           }
+          sidebarItems={sidebarItems}
         />
         <div className="w-full md:w-screen h-full relative overflow-y-auto p-4 md:p-6">
           {children}
