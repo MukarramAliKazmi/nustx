@@ -22,9 +22,9 @@ export const ToggleThemeButton: React.FC = () => {
       onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
     >
       {theme === 'dark' ? (
-        <BsMoonStarsFill className="ui-w-6 ui-h-6 ui-fill-sky-500" />
+        <BsMoonStarsFill className="w-6 h-6 fill-sky-500" />
       ) : (
-        <BsSunFill className="ui-w-6 ui-h-6 ui-fill-sky-500" />
+        <BsSunFill className="w-6 h-6 fill-sky-500" />
       )}
     </button>
   )

@@ -10,8 +10,8 @@ export const SidebarBackdrop: React.FC<SidebarBackdropProps> = ({
   handleIsSidebarOpen,
 }) => (
   <div
-    className={`ui-w-screen ui-h-full ui-absolute ui-left-full ui-top-0 ui-pointer-events-none md:ui-pointer-events-none md:ui-backdrop-blur-none ui-transition-[backdrop-filter,border-color] ui-duration-500 ui-z-20 ui-border-l ui-border-t ui-border-gray-200 dark:ui-border-gray-800 ui-rounded-tl-3xl ${
-      isSidebarOpen && 'ui-pointer-events-auto ui-backdrop-blur-sm'
+    className={`w-screen h-full absolute left-full top-0 pointer-events-none md:pointer-events-none md:backdrop-blur-none transition-[backdrop-filter,border-color] duration-500 z-20 border-l border-t border-gray-200 dark:border-gray-800 rounded-tl-3xl ${
+      isSidebarOpen && 'pointer-events-auto backdrop-blur-sm'
     }`}
     onClick={handleIsSidebarOpen}
     onKeyDown={handleIsSidebarOpen}

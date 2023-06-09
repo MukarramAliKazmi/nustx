@@ -9,11 +9,9 @@ export interface DisciplineCardProps {
 }
 
 export const DisciplineCard: React.FC<DisciplineCardProps> = ({ ...rest }) => (
-  <div className="ui-p-4 ui-overflow-hidden ui-border ui-border-gray-200 dark:ui-border-gray-800 ui-rounded-3xl ui-transition-[border,transform] ui-duration-500 ui-cursor-pointer md:hover:ui-scale-105">
-    <div className="ui-text-sky-500 ui-font-bold ui-text-xl ui-mb-4">
-      {rest.name}
-    </div>
-    <ul className="ui-flex ui-flex-col ui-gap-1">
+  <div className="p-4 overflow-hidden border border-gray-200 dark:border-gray-800 rounded-3xl transition-[border,transform] duration-500 cursor-pointer md:hover:scale-105">
+    <div className="text-sky-500 font-bold text-xl mb-4">{rest.name}</div>
+    <ul className="flex flex-col gap-1">
       <li>Semesters: {rest.semesters}</li>
       <li>Students: {rest.students}</li>
       <li>Teachers: {rest.teachers}</li>

@@ -13,8 +13,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   handleIsSidebarOpen,
 }) => (
   <div
-    className={`ui-z-30 ui-flex ui-flex-col ui-w-48 md:ui-w-64 ui-px-4 ui-py-6 md:ui-px-6 md:ui-py-8 ui-bg-inherit ui-transition-[transform] ui-duration-500 ui--translate-x-full md:ui-translate-x-0 ui-absolute md:ui-relative ui-h-full ui-box-border ${
-      isSidebarOpen && 'ui-translate-x-0'
+    className={`z-30 flex flex-col w-48 md:w-64 px-4 py-6 md:px-6 md:py-8 bg-inherit transition-[transform] duration-500 -translate-x-full md:translate-x-0 absolute md:relative h-full box-border ${
+      isSidebarOpen && 'translate-x-0'
     }`}
   >
     <SidebarItem title="Dashboard" route="/" />
@@ -22,7 +22,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <SidebarItem title="Teachers" route="/teachers" />
     <SidebarItem title="Courses" route="/courses" />
     <SidebarItem title="Disciplines" route="/disciplines" />
-    <div className="ui-flex-1" />
+    <div className="flex-1" />
     <LogoutButton />
     <SidebarBackdrop
       isSidebarOpen={isSidebarOpen}

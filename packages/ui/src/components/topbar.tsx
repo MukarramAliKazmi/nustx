@@ -11,9 +11,9 @@ export const Topbar: React.FC<TopbarProps> = ({
   isSidebarOpen,
   handleIsSidebarOpen,
 }) => (
-  <div className="ui-w-full ui-h-20 ui-flex ui-items-center ui-justify-between ui-px-4 md:ui-px-6">
-    <div className="ui-text-5xl ui-font-bold ui-text-sky-500">nustX</div>
-    <div className="ui-flex ui-items-center ui-gap-4">
+  <div className="w-full h-20 flex items-center justify-between px-4 md:px-6">
+    <div className="text-5xl font-bold text-sky-500">nustX</div>
+    <div className="flex items-center gap-4">
       <ToggleThemeButton />
       <ToggleSidebarButton
         isOpen={isSidebarOpen}

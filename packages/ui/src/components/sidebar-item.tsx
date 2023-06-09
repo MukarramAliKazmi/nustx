@@ -12,10 +12,10 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({ title, route }) => {
   return (
     <Link
       href={route}
-      className={`ui-p-4 md:hover:ui-pl-6 ui-border-l-2 md:hover:ui-border-l-4 ui-transition-[border,_padding] ui-duration-500 ${
+      className={`p-4 md:hover:pl-6 border-l-2 md:hover:border-l-4 transition-[border,_padding] duration-500 ${
         router.pathname === route
-          ? 'ui-text-sky-500 ui-border-sky-500 ui-pl-6 ui-border-l-4 ui-font-semibold'
-          : 'ui-border-gray-200 hover:ui-border-gray-300 dark:ui-border-gray-800 dark:hover:ui-border-gray-500'
+          ? 'text-sky-500 border-sky-500 pl-6 border-l-4 font-semibold'
+          : 'border-gray-200 hover:border-gray-300 dark:border-gray-800 dark:hover:border-gray-500'
       }`}
     >
       {title}
