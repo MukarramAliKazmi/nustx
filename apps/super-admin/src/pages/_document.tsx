@@ -19,7 +19,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="bg-zinc-900">
+      <Html>
         <Head />
         <body>
           <Main />
