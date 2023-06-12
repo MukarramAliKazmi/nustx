@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
-import { Sidebar } from '@/components/sidebar'
+import { Sidebar, SidebarItemProps } from '@/components/sidebar'
 import { Topbar } from '@/components/topbar'
 
 export interface LayoutProps {
   children: React.ReactNode
-  sidebarItems: Array<{ title: string; route: string }>
+  sidebarItems: Array<SidebarItemProps>
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children, sidebarItems }) => {

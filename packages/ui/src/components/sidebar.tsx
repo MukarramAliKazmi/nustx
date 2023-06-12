@@ -1,12 +1,27 @@
 import React from 'react'
-import { SidebarItem } from '@/components/sidebar-item'
+import { SidebarItemCollapsible } from '@/components/sidebar-item-collapsible'
+import { SidebarLink, SidebarLinkProps } from '@/components/sidebar-link'
 import { LogoutButton } from '@/components/logout-button'
 import { SidebarBackdrop } from '@/components/sidebar-backdrop'
+
+type SidebarWithHrefProps = {
+  title: string
+  href: string
+  sidebarSubitems?: never
+}
+
+type SidebarWithSubitemsProps = {
+  title: string
+  href?: undefined
+  sidebarSubitems: Array<SidebarLinkProps>
+}
+
+export type SidebarItemProps = SidebarWithHrefProps | SidebarWithSubitemsProps
 
 export interface SidebarProps {
   isSidebarOpen: boolean
   handleIsSidebarOpen: () => void
-  sidebarItems: Array<{ title: string; route: string }>
+  sidebarItems: Array<SidebarItemProps>
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -19,10 +34,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
       isSidebarOpen && 'translate-x-0'
     }`}
   >
-    {sidebarItems.map(item => (
-      <SidebarItem key={item.title} title={item.title} route={item.route} />
-    ))}
-    <div className="flex-1" />
+    <div className="flex flex-col flex-1 overflow-y-auto pb-16">
+      {sidebarItems.map(item =>
+        item.sidebarSubitems ? (
+          <SidebarItemCollapsible
+            key={item.title}
+            title={item.title}
+            sidebarSubitems={item.sidebarSubitems}
+          />
+        ) : (
+          <SidebarLink key={item.title} title={item.title} href={item.href} />
+        ),
+      )}
+    </div>
     <LogoutButton />
     <SidebarBackdrop
       isSidebarOpen={isSidebarOpen}

@@ -9,7 +9,7 @@ const Home: NextPage = () => (
       <title>Super Admin</title>
     </Head>
     <main>
-      <Layout sidebarItems={[{ title: 'Dashboard', route: '/' }]}>
+      <Layout sidebarItems={[{ title: 'Dashboard', href: '/' }]}>
         Dashboard
       </Layout>
     </main>
