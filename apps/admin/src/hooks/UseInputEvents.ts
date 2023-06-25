@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 
 type InputProps = React.HTMLProps<HTMLInputElement>
@@ -12,6 +14,7 @@ const useInputEvents = ({ ...rest }: InputProps) => {
       rest.onChange(e)
     }
   }
+
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
     setFocus(true)
     if (rest.onFocus) {
