@@ -1,10 +1,15 @@
 import React from 'react'
+import ThemeProvider from '@/components/ThemeProvider'
+import ReduxProvider from '@/components/ReduxProvider'
+
 import '@/styles/globals.css'
-import { ThemeProvider } from '@/components/ThemeProvider'
-import { ReduxProvider } from '@/components/ReduxProvider'
 import 'ui/styles.css'
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => (
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => (
   <html lang="en">
     <body>
       <ReduxProvider>

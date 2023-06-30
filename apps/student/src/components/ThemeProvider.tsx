@@ -3,10 +3,18 @@
 import React from 'react'
 import { ThemeProvider as NextThemeProvider } from 'next-themes'
 
-export interface ThemeProviderProps {
+interface ThemeProviderProps {
   children: React.ReactNode
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => (
-  <NextThemeProvider attribute="class">{children}</NextThemeProvider>
+const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => (
+  <NextThemeProvider
+    attribute="class"
+    defaultTheme="light"
+    themes={['light', 'dark']}
+  >
+    {children}
+  </NextThemeProvider>
 )
+
+export default ThemeProvider
